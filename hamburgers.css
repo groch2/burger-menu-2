@@ -1,5 +1,5 @@
 .hamburger {
-  display: inline-block;
+  display: inline-flex;
   cursor: pointer;
   transition-property: opacity, filter;
   transition-duration: 0.15s;
@@ -76,10 +76,6 @@
 }
 .hamburger--slider.is-active .hamburger-box > .hamburger-bottom {
   transform: translate(0, -10px) rotate(-45deg);
-}
-
-.hamburger span {
-  display: block;
 }
 
 button {
