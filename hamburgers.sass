@@ -1,3 +1,5 @@
+@use "sass:math"
+
 .hamburger
   display: inline-flex
   cursor: pointer
@@ -17,9 +19,14 @@
   &.is-active:hover
     opacity: 0.7
 
+$container-width: 30
+$container-width-unit: #{$container-width * 1px}
+$container-height: 24
+$bar-height: 4
+$bar-height-unit: #{$bar-height * 1px}
 .hamburger-box
-  width: 30px
-  height: 24px
+  width: $container-width-unit
+  height: #{$container-height * 1px}
 
   display: flex
   flex-direction: column
@@ -28,10 +35,10 @@
   & > .hamburger-top,
   & > .hamburger-middle,
   & > .hamburger-bottom
-    width: 30px
-    height: 4px
+    width: $container-width-unit
+    height: $bar-height-unit
     background-color: #000
-    border-radius: 4px
+    border-radius: $bar-height-unit
     transition-property: transform
     transition-duration: 0.15s
     transition-timing-function: ease
