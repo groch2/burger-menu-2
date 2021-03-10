@@ -1,1 +1,1 @@
-sass --watch hamburgers.sass hamburgers.css
+sass --watch hamburger.sass hamburger.css
