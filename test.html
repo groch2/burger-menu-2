@@ -8,17 +8,15 @@
 </head>
 
 <body>
-  <button class="hamburger hamburger--slider" style="border: 1px solid red;">
-    <div class="hamburger-box">
-      <div class="hamburger-top"></div>
-      <div class="hamburger-middle"></div>
-      <div class="hamburger-bottom"></div>
-    </div>
+  <button class="hamburger-box" style="border: 1px solid red;">
+    <div class="hamburger-top"></div>
+    <div class="hamburger-middle"></div>
+    <div class="hamburger-bottom"></div>
   </button>
 
   <script>
     document
-      .querySelectorAll(".hamburger")
+      .querySelectorAll(".hamburger-box")
       .forEach(function (hamburger) {
         hamburger.addEventListener(
           "click",

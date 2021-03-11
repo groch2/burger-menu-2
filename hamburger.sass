@@ -1,4 +1,10 @@
-.hamburger
+$container-width: 30
+$container-width-unit: #{$container-width * 1px}
+$container-height: 24
+$bar-height: 4
+$bar-height-unit: #{$bar-height * 1px}
+$bar-y-translate-offset: ($container-height - $bar-height) / 2
+.hamburger-box
   display: inline-flex
   cursor: pointer
   font: inherit
@@ -8,28 +14,22 @@
   border: 0
   margin: 0
   padding: 0
+  box-sizing: content-box
 
   transform: scale(5)
   transform-origin: top left
 
-  &:hover
-    opacity: 0.7
-  &.is-active:hover
-    opacity: 0.7
-
-$container-width: 30
-$container-width-unit: #{$container-width * 1px}
-$container-height: 24
-$bar-height: 4
-$bar-height-unit: #{$bar-height * 1px}
-$bar-y-translate-offset: ($container-height - $bar-height) / 2
-.hamburger-box
   width: $container-width-unit
   height: #{$container-height * 1px}
 
   display: flex
   flex-direction: column
   justify-content: space-between
+
+  &:hover
+    opacity: 0.7
+  &.is-active:hover
+    opacity: 0.7
 
   & > .hamburger-top,
   & > .hamburger-middle,
@@ -45,9 +45,8 @@ $bar-y-translate-offset: ($container-height - $bar-height) / 2
   & > .hamburger-middle
     transition-property: transform, opacity
 
-.hamburger--slider
-
-  &.is-active .hamburger-box
+.hamburger-box
+  &.is-active
     & > .hamburger-top
       transform: translateY(#{$bar-y-translate-offset * 1px}) rotate(45deg)
     & > .hamburger-middle
